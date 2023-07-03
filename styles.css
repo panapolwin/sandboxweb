@@ -116,6 +116,7 @@ body {
 }
 
 .pbt{
+    font-size: 24px;
     width: 50px;
     height: 20px;
     text-align: center;
@@ -162,4 +163,12 @@ body {
     text-align: center;
     font-size: 100px;
     background-color: rgb(0, 0, 0, 0.5);
+}
+
+.rasspan{
+    font-size: 24px;
+}
+
+#resbut{
+    font-size: 24px;
 }
