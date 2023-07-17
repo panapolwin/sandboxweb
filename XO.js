@@ -1,5 +1,6 @@
 let buttons = document.querySelectorAll(".xoimg")
 let worl = document.querySelector("#worl")
+let res = document.querySelector("#resbut2")
 let r = 0
 let count = [buttons.length]
 let score = [buttons.length]
@@ -88,10 +89,20 @@ function tudsin(){
     }
 }
 function rota(event){
-    gsap.to("#"+event, {duration: 1,rotation: 360,})
-    gsap.fromTo("#"+event, {x: -100,y: -50,opacity: 0}, {x: 0,y: 0,opacity: 1, duration: 1})
+    //gsap.to("#"+event, {duration: 1,rotation: 360,})//
+    gsap.fromTo("#"+event, {x: -100,y: -50,rotation: 0,opacity: 0}, {x: 0,y: 0,rotation: 360,opacity: 1, duration: 1})
+}
+function restart(){
+    for(let q = 0; q < buttons.length; q++){
+        buttons[q].src = "img/blank.png"
+        score[q] = ''
+        count[q] = 0
+        worl.textContent = ``
+    }
+    r = 0
 }
 
 for(let i = 0; i < buttons.length; i++){
     buttons[i].addEventListener("click", (event)=>select(event,i))
 }
+resbut2.addEventListener("click", restart)
