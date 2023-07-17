@@ -4,14 +4,16 @@ let r = 0
 let count = [buttons.length]
 let score = [buttons.length]
 
-function select(a){
+function select(event,a){
     if(r%2 == 0 && count[a] != 1){
+        rota(event.target.id)
         buttons[a].src = "img/o.png"
         score[a] = 'o'
         tudsin()
         r+=1
     }
     else if(r%2 != 0 && count[a] != 1){
+        rota(event.target.id)
         buttons[a].src = "img/x.png"
         score[a] = 'x'
         tudsin()
@@ -85,7 +87,11 @@ function tudsin(){
         worl.style.color = "red"
     }
 }
+function rota(event){
+    gsap.to("#"+event, {duration: 1,rotation: 360,})
+    gsap.fromTo("#"+event, {x: -100,y: -50,opacity: 0}, {x: 0,y: 0,opacity: 1, duration: 1})
+}
 
 for(let i = 0; i < buttons.length; i++){
-    buttons[i].addEventListener("click", ()=>select(i))
+    buttons[i].addEventListener("click", (event)=>select(event,i))
 }
