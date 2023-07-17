@@ -100,6 +100,9 @@ function restart(){
         worl.textContent = ``
     }
     r = 0
+    resbut2.style.boxShadow = "2px 2px rgb(0, 0, 0, 50%)";
+    gsap.fromTo("#resbut2", {x: 5,y: 5}, {x: 0,y: 0, duration: 0.5})
+    setTimeout(() => {  resbut2.style.boxShadow = "5px 5px rgb(0, 0, 0, 50%)"; }, 500);
 }
 
 for(let i = 0; i < buttons.length; i++){
