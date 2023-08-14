@@ -208,3 +208,25 @@ body {
     border-radius: 20px ;
     box-shadow: 5px 5px rgb(0, 0, 0, 50%);
 }
+
+.boxpic{
+    height: 100px;
+    width: 100px;
+}
+
+#cardgamebody{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cgscore{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
